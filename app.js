@@ -18,18 +18,5 @@ function delt() {
     output.value = output.value.slice(0, -1)
 }
 function calc() {
-    // use built-in function constructor to safelt evalutes the expression
-    try {
-        const result=Function(`'use strict';return (${output.value});`)();
-        if(isNaN(result) || isFinite(result)){
-            output.value="Error";
-        }
-        else{
-            output.value=result;
-        }
-    }
-    catch (e) {
-        output.value = "Error"
-    }
+    output.value = eval(output.value)
 }
-

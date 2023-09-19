@@ -97,6 +97,8 @@ const deleteButton = document.querySelector('[data-delete ]');
 const allclearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[ data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[ data-current-operand]');
+let dark_mode_btn = document.querySelector('.dark_mode_btn');
+const body = document.body;
 
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
@@ -130,3 +132,16 @@ deleteButton.addEventListener("click", button => {
     calculator.delete();
     calculator.updateDisplay()
 })
+
+ /*dark_mode*/
+    let dark_mode_status = false;
+    dark_mode_btn.addEventListener('click', function(){
+    body.classList.toggle('dark_mode_active');
+    if (dark_mode_status == false) {
+    this.innerHTML = '<i class="fa-regular fa-moon"></i>';
+    dark_mode_status = true;
+    }else{
+    this.innerHTML = '<i class="fa-regular fa-moon"></i>';
+    dark_mode_status = false;
+    }
+    });

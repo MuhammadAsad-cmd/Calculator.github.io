@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-        <title>Title</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,42 +12,52 @@
                 crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="style.css">
+        <title>Calculator</title>
+
 </head>
 
 <body>
 
-        <div class="calculator-grid">
-                <div class="output">
-                        <div data-previous-operand class="previous-operand"></div>
-                        <div data-current-operand class="current-operand"></div>
+
+
+
+        <div class="main">
+                <div class="display">
+                        <button class="dark_mode_btn"><i class="fa-regular fa-moon"></i></button>
+                        <h2 id="result">
+                                <div data-previous-operand class="previous-operand"></div>
+                                <div data-current-operand class="current-operand"></div>
+                        </h2>
                 </div>
-
-                <!-- <hr style="margin-top: 40px;" /> -->
-
-
-                <button data-all-clear style="background-color: rgb(169, 169, 169)" class="span-two">AC </button>
-                <button data-delete style="background-color: rgb(169, 169, 169)">DEL</button>
-                <button data-operation style="background-color: orange">÷</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">1</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">2</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">3</button>
-                <button data-operation style="background-color: orange">*</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">4</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">5</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">6</button>
-                <button data-operation style="background-color: orange">-</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">7</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">8</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">9</button>
-                <button data-operation style="background-color: orange">+</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">.</button>
-                <button data-number style="background-color: rgb(42, 40, 40)">0</button>
-                <button data-equals class="span-two" style="background-color: orange;">=</button>
-
-
-
-
-
+                <div data-all-clear class="buttons"> <button id="clear">C</button>
+                        <button data-delete id="delete_single_num"><i class="fa fa-scissors"
+                                        aria-hidden="true"></i></button>
+                        <button data-operation id="Normal_btn">/</button>
+                        <button data-operation id="Normal_btn">*</button>
+                </div>
+                <div class="buttons">
+                        <button data-number id="Normal_btn">7</button>
+                        <button data-number id="Normal_btn">8</button>
+                        <button data-number id="Normal_btn">9</button>
+                        <button data-operation id="Normal_btn">-</button>
+                </div>
+                <div class="buttons">
+                        <button data-number id="Normal_btn">4</button>
+                        <button data-number id="Normal_btn">5</button>
+                        <button data-number id="Normal_btn">6</button>
+                        <button data-operation id="Normal_btn">+</button>
+                </div>
+                <div class="buttons">
+                        <button data-number id="Normal_btn">1</button>
+                        <button data-number id="Normal_btn">2</button>
+                        <button data-number id="Normal_btn">3</button>
+                        <button data-operation id="Normal_btn">.</button>
+                </div>
+                <div class="buttons">
+                        <button data-number id="Normal_btn">0</button>
+                        <button data-number id="Normal_btn">00</button>
+                        <button data-equals id="equalTo">=</button>
+                </div>
         </div>
 
 
